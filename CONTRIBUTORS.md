@@ -4,7 +4,7 @@
 
 # CC-BY-2.0 Contributors
 
-* Ironcat 
+* Ironcat https://imgur.com/user/DidYouIronTheCat
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.adept.png
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.aurelian.png
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.masterful.png
