@@ -1,0 +1,16 @@
+[
+{
+  "modid": "whoneedsbooks",
+  "name": "Who Needs Books",
+  "description": "Who needs books anyways. Ignore the books.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making forge available. Azanor for being an inspiration. Redgreens, DidYouIronTheCat, Sentenal01, and all the guys from the thaumcraft server who I love dearly",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
