@@ -71,6 +71,12 @@ public class ProxyClient implements Proxy {
 		
 	}
 
+	public IThreadListener getThreadFromContext(MessageContext ctx) {
+		if(!ctx.side.isClient()) {
+			throw new Proxy.WrongSideException("Wrong side! This is a client proxy, not a server proxy!");
+		}
+		return MINECRAFT;
+	}
 
 
 	@Override

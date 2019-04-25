@@ -68,6 +68,12 @@ public interface Proxy {
 	EntityPlayer getPlayer(MessageContext context);
 
 	/**
+	 * Returns the current thread based on side during message handling,
+	 * used for ensuring that the message is being handled by the main thread
+	 */
+	public IThreadListener getThreadFromContext(MessageContext ctx);
+	
+	/**
 	 * Thrown when a proxy method is called from the wrong side.
 	 */
 	class WrongSideException extends RuntimeException {

@@ -2,3 +2,8 @@ item.whoneedsbooks:spellbook_novice.name=Novice Spell Book
 item.whoneedsbooks:spellbook_adept.name=Adept Spell Book
 item.whoneedsbooks:spellbook_masterful.name=Masterful Spell Book
 item.whoneedsbooks:spellbook_aurelian.name=Aurelian Spell Book
+
+tschallacka.whoneedsbooks.spellbook.gui.enter.command=Enter commands. Max length 32500 characters. Separate commands with !c:
+tschallacka.whoneedsbooks.spellbook.gui.enter.command.example=For Example: /setblock ~ ~1 ~ sand!c:/setblock ~ ~-1 ~ water
+tschallacka.whoneedsbooks.spellbook.gui.command.title=Commands(5 lines x 32500 chars)
+tschallacka.whoneedsbooks.spellbook.gui.timemout.title=Delay in ticks
