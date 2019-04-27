@@ -1,4 +1,9 @@
+# Pending License status contributors
+
+* CoolAlias for his network wrapper tutorial script: https://github.com/coolAlias/Tutorial-Demo/issues/3
+
 # MIT Contributors
+
 * Tschallacka - Mod author
 * Choonster - Inspiration for how to handle stuff
 
@@ -9,3 +14,9 @@
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.aurelian.png
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.masterful.png
   * src/main/resources/assets/whoneedsbooks/textures/items/spellbook.novice.png
+  
+# Pixabay Contributors
+
+* Logo background ChadoNihi https://pixabay.com/users/chadonihi-634818/
+  * src/main/resources/assets/whoneedsbooks/mcmod/logo.png
+  

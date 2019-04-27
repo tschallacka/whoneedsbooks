@@ -53,7 +53,15 @@ public class ProxyServer implements Proxy {
 			throw new WrongSideException("Tried to get the player from a client-side MessageContext on the dedicated server");
 		}
 	}
-
+	
+	/**
+	 * Returns the current thread based on side during message handling,
+	 * used for ensuring that the message is being handled by the main thread
+	 */
+	public IThreadListener getThreadFromContext(MessageContext ctx) {
+		return ctx.getServerHandler().player.getServer();
+	}
+	
 	@Override
 	public void preInit(FMLPreInitializationEvent e) {
 		// TODO Auto-generated method stub

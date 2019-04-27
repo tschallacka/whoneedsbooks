@@ -71,6 +71,10 @@ public class ProxyClient implements Proxy {
 		
 	}
 
+	public IThreadListener getThreadFromContext(MessageContext ctx) {
+		
+		return MINECRAFT;
+	}
 
 
 	@Override
