@@ -2,6 +2,7 @@ package tschallacka.mods.whoneedsbooks.util;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import net.minecraft.command.ICommandSender;
 import net.minecraft.crash.CrashReport;
@@ -28,7 +29,7 @@ public class CommandRunner
 	
 	protected boolean debug;
 	
-	protected LinkedList<SpellCommandGroup> runners = new LinkedList<SpellCommandGroup>();
+	protected LinkedBlockingQueue<SpellCommandGroup> runners = new LinkedBlockingQueue <SpellCommandGroup>();
 	
 	public CommandRunner(EntityPlayer p, ItemStack itemstack, SpellBookInteractor bookInterActor) {
 		this.player = p;
@@ -74,8 +75,10 @@ public class CommandRunner
 		Iterator<SpellCommandGroup> it = runners.iterator();
 		while(it.hasNext()) {
 			SpellCommandGroup spell = it.next();
-			spell.run();
-			if(spell.hasRun()) {
+			if(!spell.hasRun()) {
+				spell.run();
+			}
+			else {
 				it.remove();
 			}
 		}
@@ -85,14 +88,14 @@ public class CommandRunner
 	{
 		protected int delay;
 		public final EntityPlayer player;
-		protected LinkedList<String> commands;
+		protected LinkedBlockingQueue <String> commands;
 		protected boolean debug; 
 		
 		public SpellCommandGroup(int delay, EntityPlayer p) 
 		{
 			this.delay = delay;
 			this.player = p;
-			commands = new LinkedList<String>();
+			commands = new LinkedBlockingQueue<String>();
 		}
 		
 		public void setDebug(boolean debug) {

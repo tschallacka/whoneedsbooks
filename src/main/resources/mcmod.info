@@ -3,13 +3,13 @@
   "modid": "whoneedsbooks",
   "name": "Who Needs Books",
   "description": "Who needs books anyways. Ignore the books.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "1.0",
+  "mcversion": "1.2.22",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making forge available. Azanor for being an inspiration. Redgreens, DidYouIronTheCat, Sentenal01, and all the guys from the thaumcraft server who I love dearly",
-  "logoFile": "",
+  "authorList": ["Tschallacka"],
+  "credits": "The Forge and FML guys, for making forge available. Azanor for being an inspiration. Redgreens, DidYouIronTheCat, Sentenal01, and all the guys from the thaumcraft server who I love dearly, CoolAlias for the tutorials, Choonster for example files. See the contributors mentioned in CONTRIBUTORS.md on the github page for others.",
+  "logoFile": "assets/whoneedsbooks/mcmod/logo.png",
   "screenshots": [],
   "dependencies": []
 }

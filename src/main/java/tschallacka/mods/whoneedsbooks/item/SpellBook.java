@@ -3,6 +3,7 @@ package tschallacka.mods.whoneedsbooks.item;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import javax.annotation.Nullable;
 
@@ -33,7 +34,7 @@ public class SpellBook extends Item
 	private final SpellBookType type;
 	private final ItemVariantGroup<SpellBookType, SpellBook> variantGroup;
 	private final SpellBookInteractor interactor;
-	public LinkedList<CommandRunner> runners = new LinkedList<CommandRunner>();
+	public LinkedBlockingQueue<CommandRunner> runners = new LinkedBlockingQueue <CommandRunner>();
 	
 	public SpellBook(final SpellBookType type, final ItemVariantGroup<SpellBookType, SpellBook> variantGroup) 
 	{

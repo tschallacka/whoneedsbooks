@@ -13,3 +13,5 @@ tschallacka.whoneedsbooks.spellbook.gui.enable.debug=Debug disabled
 tschallacka.whoneedsbooks.spellbook.gui.disable.debug=Debug enabled
 tschallacka.whoneedsbooks.spellbook.tooltip.cooldown.time=Remaining recharge time 
 tschallacka.whoneedsbooks.spellbook.tooltip.cooldown.complete=Vibrating with a mysterious energy
+
+itemGroup.whoneedsbooks=Who Needs Books
