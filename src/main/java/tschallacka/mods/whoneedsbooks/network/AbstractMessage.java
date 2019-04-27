@@ -14,7 +14,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import tschallacka.mods.whoneedsbooks.WhoNeedsBooks;
 
 import com.google.common.base.Throwables;
-
+/**
+ * @author CoolAlias
+ * License status: Pending https://github.com/coolAlias/Tutorial-Demo/issues/3
+ */
 /**
  * 
  * Creating an abstract message class similar to {@link Packet} allows us to take

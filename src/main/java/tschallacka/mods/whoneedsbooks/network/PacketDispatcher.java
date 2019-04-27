@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 import tschallacka.mods.whoneedsbooks.WhoNeedsBooks;
+import tschallacka.mods.whoneedsbooks.network.client.SyncSpellBookCommands;
 
 
 
@@ -46,39 +47,35 @@ public class PacketDispatcher
 	private static final SimpleNetworkWrapper dispatcher = NetworkRegistry.INSTANCE.newSimpleChannel(WhoNeedsBooks.MODID);
 
 	/**
+	 * Packets that the client sends to server
+	 */
+	protected static final void registerServerPackets() 
+	{
+		registerMessage(SyncSpellBookCommands.class);
+	}
+	
+	/**
+	 * Packets that the server sends to the client
+	 */
+	protected static final void registerClientPackets() 
+	{
+		
+	}
+	/**
+	 * Packets that go both ways.
+	 */
+	protected static final void registerBiDirectionalPackets() 
+	{
+		
+	}
+	
+	/**
 	 * Call this during pre-init or loading and register all of your packets (messages) here
 	 */
 	public static final void registerPackets() {
-		// Packets handled on CLIENT
-		/*registerMessage(SyncPlayerPropsMessage.class);
-		registerMessage(ChangeBiomeMessage.class);
-		registerMessage(Particle.class);
-		registerMessage(VoidCrystalSetColorMessage.class);
-		
-		// Packets handled on SERVER
-		//registerMessage(OpenGuiMessage.class);
-		registerMessage(InventorySlotVisibleMessage.class);
-		registerMessage(AnswerStartShowMessage.class);
-		registerMessage(AnswerStopShowMessage.class);
-		registerMessage(QuestionOptionSelectedMessage.class);
-		registerMessage(SyncPlayerPotionsMessage.class);
-		registerMessage(VoidCrystalAddItemPacket.class);
-		registerMessage(VoidCrystalRemoveItemPacket.class);
-		registerMessage(VoidCrystalRemoveItemPacketToPlayerInventory.class);
-		registerMessage(VoidCrystalGuiSetPlayerInventorySlotContent.class);
-		registerMessage(VoidCrystalAddItemPacketFromPlayerInventory.class);
-		registerMessage(VoidCrystalDropItemPacketOnGround.class);
-		// If you don't want to make a 'registerMessage' method, you can do it directly:
-		//PacketDispatcher.dispatcher.registerMessage(SyncPlayerPropsMessage.class, SyncPlayerPropsMessage.class, packetId++, Side.CLIENT);
-		//PacketDispatcher.dispatcher.registerMessage(OpenGuiMessage.class, OpenGuiMessage.class, packetId++, Side.SERVER);
-
-		// The following two packets are not used in this demo, but have been used in my other mods
-		// I include them here simply for the sake of demonstrating packets that can be sent to both sides
-
-		// Bidirectional packets:
-		registerMessage(PlaySoundPacket.class);
-		registerMessage(UpdateVoidCrystalPacket.class);
-		//registerMessage(AttackTimePacket.class);*/
+		registerServerPackets();
+		registerClientPackets();
+		registerBiDirectionalPackets();
 	}
 
 	/**

@@ -9,6 +9,7 @@ import tschallacka.mods.whoneedsbooks.ItemLibrary;
 import tschallacka.mods.whoneedsbooks.client.gui.GuiContainerFactory;
 import tschallacka.mods.whoneedsbooks.client.gui.GuiType;
 import tschallacka.mods.whoneedsbooks.client.gui.render.GuiSpellBook;
+import tschallacka.mods.whoneedsbooks.item.SpellBook;
 
 public class SpellBookGuiProvider implements GuiContainerFactory {
 
@@ -16,7 +17,7 @@ public class SpellBookGuiProvider implements GuiContainerFactory {
 	public boolean matches(int ID, EntityPlayer player, Entity entity, TileEntity tileEntity, World world, int x, int y, int z) {
 		if(player != null) {
 			ItemStack stack = player.getHeldItemMainhand();
-			if(ItemLibrary.VariantGroups.SPELLBOOKS.getItems().contains(stack.getItem())) {
+			if(stack.getItem() instanceof SpellBook && player.canUseCommandBlock() && player.isCreative()) {
 				return ID == GuiType.SPELLBOOK_GUI.getID();
 			}
 		}

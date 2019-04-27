@@ -55,7 +55,7 @@ public class WhoNeedsBooks
     	proxy.postInit(e);
     }
     
-    public void log(String str) {
+    public static void log(String str) {
     	logger.info(str);
     }
 }
