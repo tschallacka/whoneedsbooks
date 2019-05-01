@@ -6,7 +6,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public interface GuiContainerFactory {
+public interface GuiContainerFactory 
+{
 	/**
 	 * Return true if all the conditions match on this, and the gui
 	 * should be opened for this set of variables

@@ -18,14 +18,15 @@ public class GuiHandler implements IGuiHandler
 {
 	List<GuiContainerFactory> containerFactories;
 	
-	public GuiHandler() {
+	public GuiHandler() 
+	{
 		initContainerFactories();
 	}
-	private void initContainerFactories() {
+	
+	private void initContainerFactories() 
+	{
 		containerFactories = new ArrayList<GuiContainerFactory>();
-		containerFactories.add(new SpellBookGuiProvider());
-		
-		
+		containerFactories.add(new SpellBookGuiProvider());	
 	}
 	/**
 	 * Called in RedsgreensVillager.interact

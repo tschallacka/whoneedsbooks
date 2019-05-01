@@ -8,23 +8,27 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import tschallacka.mods.whoneedsbooks.WhoNeedsBooks;
 
-public class CreativeTab extends CreativeTabs {
+public class CreativeTab extends CreativeTabs 
+{
 	private final ItemStack bookIcon;
 
-	public CreativeTab() {
+	public CreativeTab() 
+	{
 		super(WhoNeedsBooks.MODID);
 		bookIcon = new ItemStack(Items.KNOWLEDGE_BOOK);
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void displayAllRelevantItems(final NonNullList<ItemStack> items) {
+	public void displayAllRelevantItems(final NonNullList<ItemStack> items) 
+	{
 		super.displayAllRelevantItems(items);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	@Override
-	public ItemStack getTabIconItem() {
+	public ItemStack getTabIconItem() 
+	{
 		return bookIcon;
 	}
 }

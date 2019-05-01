@@ -1,6 +1,8 @@
 package tschallacka.mods.whoneedsbooks;
 
 import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,6 +13,10 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import tschallacka.mods.whoneedsbooks.client.gui.GuiHandler;
 import tschallacka.mods.whoneedsbooks.creative.CreativeTab;
+import tschallacka.mods.whoneedsbooks.entities.living.player.ExtendedPlayer;
+import tschallacka.mods.whoneedsbooks.entities.living.player.ExtendedPlayerEventHandler;
+import tschallacka.mods.whoneedsbooks.entities.living.player.ExtendedPlayerStorage;
+import tschallacka.mods.whoneedsbooks.entities.living.player.MagicPlayer;
 import tschallacka.mods.whoneedsbooks.network.PacketDispatcher;
 import tschallacka.mods.whoneedsbooks.proxy.Proxy;
 
@@ -38,7 +44,7 @@ public class WhoNeedsBooks
     {
         logger = event.getModLog();
         PacketDispatcher.registerPackets();
-        
+        CapabilityManager.INSTANCE.register(ExtendedPlayer.class, new ExtendedPlayerStorage(), ()->{return new MagicPlayer();});
         proxy.preInit(event);
     }
 

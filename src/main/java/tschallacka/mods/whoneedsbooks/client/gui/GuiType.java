@@ -1,12 +1,16 @@
 package tschallacka.mods.whoneedsbooks.client.gui;
 
-public enum GuiType {
+public enum GuiType 
+{
 	SPELLBOOK_GUI
 	;
-	public int getID() {
+	public int getID() 
+	{
 		return this.ordinal();
 	}
-	public boolean is(int compare) {
+	
+	public boolean is(int compare) 
+	{
 		return compare == this.ordinal();
 	}
 }

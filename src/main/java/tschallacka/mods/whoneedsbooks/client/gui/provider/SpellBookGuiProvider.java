@@ -11,8 +11,8 @@ import tschallacka.mods.whoneedsbooks.client.gui.GuiType;
 import tschallacka.mods.whoneedsbooks.client.gui.render.GuiSpellBook;
 import tschallacka.mods.whoneedsbooks.item.SpellBook;
 
-public class SpellBookGuiProvider implements GuiContainerFactory {
-
+public class SpellBookGuiProvider implements GuiContainerFactory 
+{
 	@Override
 	public boolean matches(int ID, EntityPlayer player, Entity entity, TileEntity tileEntity, World world, int x, int y, int z) {
 		if(player != null) {
@@ -25,12 +25,14 @@ public class SpellBookGuiProvider implements GuiContainerFactory {
 	}
 
 	@Override
-	public Object getServerGuiElement(int ID, EntityPlayer player, Entity entity,TileEntity tileEntity, World world, int x, int y, int z) {
+	public Object getServerGuiElement(int ID, EntityPlayer player, Entity entity,TileEntity tileEntity, World world, int x, int y, int z)
+	{
         return null;
 	}
 
 	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, Entity entity,TileEntity tileEntity, World world, int x, int y, int z) {
+	public Object getClientGuiElement(int ID, EntityPlayer player, Entity entity,TileEntity tileEntity, World world, int x, int y, int z) 
+	{
 		return new GuiSpellBook(player.getHeldItemMainhand());
 	}
 
