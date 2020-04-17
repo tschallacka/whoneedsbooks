@@ -4,6 +4,17 @@ Who Needs Books Anyways
 
 Adding spells books to Minecraft. What's more to say.
 
+# How to use
+
+* With CrafTweaker or /give command one can create a new spellbook with added tags to configure.
+
+Example:
+```
+<whoneedsbooks:spellbook_novice>.withTag({t4: 3, t5: 4, debug: 0 as byte, RepairCost: 0, display: {Name: "Book of Myst"}, c1: "/particle explode ~ ~ ~ 5 5 5 0.1 250", c2: "/playsound botania:enchanterenchant player @p", c3: "/effect @p tombstone:g
+```
+
+* In creative mode a spell book when right clicked will display a gui for entering commands, delay timing in ticks, and cool down time
+
 # Contributing rules
 
 * If you wish to send a pull request, do it to the develop branch, not the master.  
