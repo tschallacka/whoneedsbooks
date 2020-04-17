@@ -17,7 +17,7 @@ Example:
 
 # How the books work
 
-Each book can hold up to five command block commands. So in theory you can also nest commands and such.  
+Each book can hold up to five command block commands. 
 Each command will execute after the timeout has run out.  
 In the NBT tags `c1` runs after `t1` runs out, `c2` runs after `t2` runs out, etc... up to `c5` running after `t5` runs out.  
 Timeouts are in ticks. so a timeout of 1 is one tick, a timeout of 5 is five ticks. There should be 20 ticks in a second, but that may vary per server, adapt your commands accordingly.
@@ -31,6 +31,18 @@ Commands are activated if a player that is not in creative, but has command bloc
 If a player is in creative the player can edit the commands in an ingame interface.  
 For duplicating a book I recommend placing it in an itemframe and then when in creative middle mouse click the book.  
 
+# Composing spells
+
+You can add multiple commands on line line by seperating them with `!c:`
+
+So taking the example above: 
+    `c1: "/particle explode ~ ~ ~ 5 5 5 0.1 250", c2: "/playsound botania:enchanterenchant player @p",` 
+    
+you can merge these two commands into a single command.
+
+    c1: "/particle explode ~ ~ ~ 5 5 5 0.1 250!c:/playsound botania:enchanterenchant player @p",
+
+In theory these commands will be run as if the player had executed them just like on a command block push. So @p and other targetters should work normal.
 
 # Contributing rules
 
