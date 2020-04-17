@@ -15,6 +15,23 @@ Example:
 
 * In creative mode a spell book when right clicked will display a gui for entering commands, delay timing in ticks, and cool down time
 
+# How the books work
+
+Each book can hold up to five command block commands. So in theory you can also nest commands and such.  
+Each command will execute after the timeout has run out.  
+In the NBT tags `c1` runs after `t1` runs out, `c2` runs after `t2` runs out, etc... up to `c5` running after `t5` runs out.  
+Timeouts are in ticks. so a timeout of 1 is one tick, a timeout of 5 is five ticks. There should be 20 ticks in a second, but that may vary per server, adapt your commands accordingly.
+
+There is also a `cooldown_ticks` NBT tag, that will count down the ticks until the spellbook can be used again. With a cooldown of 500 an item can only be used once every ten seconds.
+**Do not use** the nbt tag `cooldown` as that is used to monitor internally how many ticks have passed, incase a server restarts or dimensions are jumped.
+
+There is also a `debug` nbt tag that can be set to true to get debug messages of failing commands.
+
+Commands are activated if a player that is not in creative, but has command block activation permissions rightclicks whilst holding the book in the active hand.  
+If a player is in creative the player can edit the commands in an ingame interface.  
+For duplicating a book I recommend placing it in an itemframe and then when in creative middle mouse click the book.  
+
+
 # Contributing rules
 
 * If you wish to send a pull request, do it to the develop branch, not the master.  
